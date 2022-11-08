@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       
+<!--<bean id="Student1" class="com.cg.springdi.Student"> 
+<constructor-arg name="studentName" value="Yashu"> </constructor-arg>
+<constructor-arg name="registerNo" value="101"> </constructor-arg>
+</bean>
+
+<bean id="Student2" class="com.cg.springdi.Student"> 
+<constructor-arg name="studentName" value="Ishuu"> </constructor-arg>
+<constructor-arg name="registerNo" value="102"> </constructor-arg>
+</bean>-->
+
+<bean id="MathChit" class="com.cg.springdi1.MathCheat"> </bean>
+
+<bean id="Student1" class="com.cg.springdi1.Student">
+<property name="mc" ref="MathChit">
+</property>
+</bean>
+
+<bean id="Student2" class="com.cg.springdi1.AnotherStudent">
+<property name="mc" ref="MathChit">
+</property>
+</bean>
+
+<bean id="Student3" class="com.cg.springdi1.Student">
+<property name="mc" ref="MathChit">
+</property>
+</bean>
+
+<!--bean id="Student1" class="com.cg.springdi1.Student">
+<property name="mc"> 
+<bean class="com.cg.springdi1.MathCheat"> </bean>
+</property>
+</bean>
+
+<bean id="Student2" class="com.cg.springdi1.AnotherStudent">
+<property name="mc"> 
+<bean class="com.cg.springdi1.MathCheat"> </bean>
+</property>
+</bean>-->
+
+</beans>
