@@ -10,7 +10,7 @@ public class Placement {
 	private String name;
 	private String college;
 	private int date;
-	private  String qualification;
+	private String qualification;
 	private int year;
 	
 	public Placement() {
